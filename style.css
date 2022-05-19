@@ -62,4 +62,5 @@ tc-input:focus{
 
 .show-if-valid {
     color: white;
+    height: 2.1rem;
 }

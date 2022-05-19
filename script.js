@@ -60,13 +60,11 @@ function validate(e) {
             alert("invalid")
         }else if(digit10 == formInput.value[9] && digit11 == formInput.value[10]) {
             showIfValid.textContent = `${formInput.value}: VALID`
-            console.log("valid")
             body.style.backgroundColor = "#28A745";
             validationBtn.style.backgroundColor = "black";
             formValidation.reset();
         }else {
             showIfValid.textContent = `${formInput.value}: INVALID`
-            console.log("invalid")
             body.style.backgroundColor = "#DC3545";
             validationBtn.style.backgroundColor = "black";
             formValidation.reset();
