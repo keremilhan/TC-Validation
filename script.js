@@ -9,7 +9,8 @@ function checkSpace(event)
    if(event.which ==32)
    {
       event.preventDefault();
-      return alert("Please don't use space");
+      showIfValid.textContent = `Please don't use space`;
+      body.style.backgroundColor = "#17A2B8";
    }
 }
 
@@ -20,15 +21,21 @@ function validate(e) {
     e.preventDefault();
 
     if(isNaN(formInput.value)){
-        alert("Please enter a number");
+        showIfValid.textContent = `Please enter a number`;
+        body.style.backgroundColor = "#17A2B8";
         formValidation.reset();
+        
     }else if(formInput.value.length == 0) {
-        alert("Please don't leave the input field empty");
+        showIfValid.textContent = `Please don't leave the input field empty`;
+        body.style.backgroundColor = "#17A2B8";
     }else if(formInput.value.length < 11){
-        alert("The number should have 11 digits")
+        showIfValid.textContent = `The number should have 11 digits`;
+        body.style.backgroundColor = "#17A2B8";
         formValidation.reset();
     }else if(formInput.value.includes(".")){
-        alert("Please do not enter decimal number")
+        showIfValid.textContent = `Please do not enter decimal number`;
+        body.style.backgroundColor = "#17A2B8";
+        formValidation.reset();
     }
     else{
         let = oddNumbersSum = 0;
@@ -59,12 +66,12 @@ function validate(e) {
         if(formInput.value[0] == 0) {
             alert("invalid")
         }else if(digit10 == formInput.value[9] && digit11 == formInput.value[10]) {
-            showIfValid.textContent = `${formInput.value}: VALID`
+            showIfValid.textContent = `${formInput.value} is VALID`
             body.style.backgroundColor = "#28A745";
             validationBtn.style.backgroundColor = "black";
             formValidation.reset();
         }else {
-            showIfValid.textContent = `${formInput.value}: INVALID`
+            showIfValid.textContent = `${formInput.value} is INVALID`
             body.style.backgroundColor = "#DC3545";
             validationBtn.style.backgroundColor = "black";
             formValidation.reset();
