@@ -64,7 +64,9 @@ function validate(e) {
         let digit11 = digit11String[digit11String.length -1]
 
         if(formInput.value[0] == 0) {
-            alert("invalid")
+            showIfValid.textContent = `The first digit of the number can't be 0`;
+            body.style.backgroundColor = "#17A2B8";
+            formValidation.reset();
         }else if(digit10 == formInput.value[9] && digit11 == formInput.value[10]) {
             showIfValid.textContent = `${formInput.value} is VALID`
             body.style.backgroundColor = "#28A745";
